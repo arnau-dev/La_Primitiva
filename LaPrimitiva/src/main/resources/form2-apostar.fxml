@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ApostaController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="360.0" layoutY="48.0" lineSpacing="2.0" text="Apostar" textFill="WHITE" underline="true">
+         <font>
+            <Font name="Arial Black" size="52.0" />
+         </font>
+      </Label>
+      <Label layoutX="151.0" layoutY="418.0" prefHeight="47.0" prefWidth="187.0" text="Data Sorteig" textFill="WHITE">
+         <font>
+            <Font size="32.0" />
+         </font></Label>
+      <MenuButton fx:id="menuButtonSorteig" alignment="CENTER" contentDisplay="CENTER" layoutX="464.0" layoutY="416.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="317.0" style="-fx-background-color: #ff0000;" text="Selecciona una data" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font></MenuButton>
+      <Label layoutX="144.0" layoutY="198.0" prefHeight="47.0" prefWidth="222.0" text="Tipus d'Aposta" textFill="WHITE">
+         <font>
+            <Font size="32.0" />
+         </font></Label>
+      <MenuButton fx:id="menuButtonTipus" layoutX="471.0" layoutY="200.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="317.0" style="-fx-background-color: #ff0000;" text="Selecciona el tipus d'aposta" textFill="WHITE">
+        <items>
+          <MenuItem fx:id="tPersonal" mnemonicParsing="false" onAction="#apostaPersonal" text="Crear tiquet" />
+          <MenuItem fx:id="tAleatoria" mnemonicParsing="false" onAction="#seleccionarApostaAleatoria" text="Aleatoria" />
+
+
+        </items>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </MenuButton>
+      <Label fx:id="labelCombinacio" layoutX="144.0" layoutY="292.0" prefHeight="25.0" prefWidth="222.0" text="Introdueix una combinació" textFill="WHITE" visible="false">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label fx:id="labelTipusAposta" layoutX="144.0" layoutY="325.0" prefHeight="25.0" prefWidth="222.0" text="Introdueix el reintegrament" textFill="WHITE" visible="false">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <TextField fx:id="textCombi" layoutX="471.0" layoutY="292.0" prefHeight="25.0" prefWidth="129.0" visible="false" />
+      <TextField fx:id="textTipus" layoutX="471.0" layoutY="325.0" prefHeight="25.0" prefWidth="23.0" visible="false" />
+      <Button fx:id="buttonTornarJugar" layoutX="640.0" layoutY="270.0" mnemonicParsing="false" onAction="#generarCombinacioAleatoria" style="-fx-background-color: #000000;" textFill="WHITE" visible="false">
+         <font>
+            <Font />
+         </font></Button>
+      <Button fx:id="bAfegir" layoutX="151.0" layoutY="570.0" mnemonicParsing="false" onAction="#afegir" prefHeight="62.0" prefWidth="143.0" style="-fx-background-color: #ff0000;" text="Afegir" textFill="WHITE">
+         <font>
+            <Font name="Gadugi" size="24.0" />
+         </font></Button>
+      <Button fx:id="bCancelar" layoutX="312.0" layoutY="570.0" mnemonicParsing="false" onAction="#backMenu" prefHeight="62.0" prefWidth="143.0" style="-fx-background-color: #ff0000;" text="Cancelar" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Label fx:id="labelCancelar" layoutX="98.0" layoutY="204.0" text="Sorteig Anterior:" visible="false" />
+      <Label fx:id="labelIdentificador" layoutX="115.0" layoutY="249.0" text="Identificador:" visible="false" />
+      <MenuButton fx:id="menuButtonTornar" layoutX="190.0" layoutY="200.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="222.0" text="Sorteig anterior..." visible="false" />
+      <TextField fx:id="textIdentificador" layoutX="190.0" layoutY="245.0" prefHeight="25.0" prefWidth="222.0" promptText="Identificador..." visible="false" />
+      <CheckBox fx:id="checkBoxReintegro" layoutX="550.0" layoutY="325.0" mnemonicParsing="false" onAction="#selectReintegrament" selected="true" style="-fx-background-color: #ff0000;" text="Volse Número de Reintegro?" textFill="WHITE" visible="false">
+         <font>
+            <Font size="16.0" />
+         </font></CheckBox>
+   </children>
+</Pane>
